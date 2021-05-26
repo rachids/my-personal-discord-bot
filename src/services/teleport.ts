@@ -1,11 +1,11 @@
-const baseURL = 'https://api.teleport.org/api/';
+const baseURL = "https://api.teleport.org/api/";
 
 export async function getInfosForCity(city: string)
 {
     const geoNameURL = await getGeoname(city);
     const cityInfos = await getCityInfo(geoNameURL);
 
-    return cityInfos;
+  return cityInfos;
 }
 
 async function getGeoname(city: string) {
@@ -21,5 +21,5 @@ async function getCityInfo(url: string)
     const response = await fetch(url);
     const body = await response.json();
 
-    return body;
+  return body;
 }
