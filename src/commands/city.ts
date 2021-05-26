@@ -13,7 +13,7 @@ createCommand({
   }],
   execute: async function (message, args) {
 
-    let infos = await getInfosForCity(args.city);
+    const infos = await getInfosForCity(args.city);
 
     message.reply(`Tu savais que *` + infos.name + `* compte pas moins de *` + infos.population +`* habitants ?! La dinguerie.`);
   },
